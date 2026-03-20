@@ -1,43 +1,46 @@
-# Kyle's Stack
+# Todo App
 
-A starter for building apps with TanStack Start, Radix UI, and capsize typography — with [`@tanstack/intent`](https://github.com/TanStack/intent) skills pre-installed for **Electric**, **TanStack DB**, and **Durable Streams**.
+A reactive, real-time todo list built with Electric SQL and TanStack DB. Todos sync instantly across all connected browser tabs and clients.
 
-## Quick Start
+## Features
+
+- Add new todos with a text input
+- Mark todos as complete / incomplete with a checkbox
+- Delete individual todos
+- Filter by: All, Active, or Completed
+- Clear all completed todos at once
+- Real-time sync across browser tabs via Electric SQL
+- Optimistic mutations for instant UI feedback
+
+## Tech Stack
+
+- **Electric SQL** — Postgres-to-client sync via shapes
+- **TanStack DB** — Reactive collections and optimistic mutations
+- **Drizzle ORM** — Schema definitions and migrations
+- **TanStack Start** — React meta-framework with SSR
+- **Radix UI Themes** — Component library
+
+## Getting Started
 
 ```bash
-npx gitpick KyleAMathews/kpb my-app
-cd my-app
 pnpm install
-pnpm dev
+pnpm dev:start
 ```
 
-## Included Skills
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-This starter comes with skills pre-installed. Just ask your coding agent:
+## Development
 
-**Electric** — Sync Postgres to your app
-- "Set up Electric sync for my Postgres database"
-- "Run the Electric security checklist"
+```bash
+# Run tests
+pnpm test
 
-**TanStack DB** — Reactive client-side data
-- "Add a TanStack DB collection for the users table"
-- "Set up live queries for my todos"
+# Build for production
+pnpm build
 
-**Durable Streams** — Real-time state sync
-- "Set up a Durable Streams dev environment"
-- "Add presence tracking to my app"
-
-**Radix + Capsize** — Typography
-- "Switch to the Playfair theme"
-- "Show me more font theme options"
-
-## What's Included
-
-- **TanStack Start** - Full-stack React framework
-- **Radix UI** - Accessible components with themes
-- **Capsize typography** - Pixel-perfect text rendering
-- **Dozens of font pairings included** - Ask the agent to set one up
-- **Biome** - Fast linting and formatting
+# Stop dev server
+pnpm dev:stop
+```
 
 ## License
 
